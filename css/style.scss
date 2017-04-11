@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 $bodyColor: #39c;
 $headerColor: #0A3B57;
-$contentMargin: 15%;
+$contentMargin: 12%;
 * {
   box-sizing: border-box;
 }
@@ -58,8 +58,10 @@ main {
   font-family: 'Roboto Slab', serif;
 }
 
-.navigation {
+header .navigation {
   float: right;
+}
+.navigation {
   .menu {
     list-style-type: none;
   }
@@ -91,7 +93,7 @@ main {
 
 .side-bar {
   float: right;
-  width: 25%;
+  width: 20%;
 }
 
 .input-text {
@@ -172,5 +174,56 @@ main {
     &:hover {
       color: #6ED3F7;
     }
+  }
+}
+
+.new-film {
+  width: 80%;
+  float: left;
+  figure {
+    float: left;
+    margin: 0 5% 5% 0;
+    padding: 0;
+    &:hover {
+      color: #02182C;
+    }
+    figcaption {
+      max-width: 150px;
+    }
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
+footer {
+  background: radial-gradient(circle at 50% -100%, lighten($headerColor, 10%), $headerColor);
+  padding: 10px 0;
+  text-align: center;
+  .navigation {
+    display: inline-block;
+  }
+}
+.navigation {
+  .footer-menu {
+    list-style-type: none;
+  }
+}
+.footer-menu {
+  li {
+    margin: 0;
+    padding: 0 10px;
+    border-right: 2px solid #6ED3F7;
+    a {
+      color: #6ED3F7;
+      text-decoration: underline;
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  li:last-child {
+    border-right: none;
   }
 }
