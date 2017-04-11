@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+$bodyColor: #39c;
+$headerColor: #0A3B57;
+$contentMargin: 15%;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bodyColor;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+header,
+main {
+  padding: 2% 0;
+}
+
+header {
+  background: radial-gradient(circle at 50% 150%, lighten($headerColor, 10%), $headerColor);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header,
+.navigation,
+main {
+  margin: 0 $contentMargin;
+}
+
+.header {
+  display: inline-block;
+  a:hover {
+    color: #91F3F3;
+  }
+}
+
+.logo,
+.slogan {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-family: 'Roboto Slab', serif;
+}
+
+.navigation {
+  float: right;
+  .menu {
+    list-style-type: none;
+  }
+  li {
+    float: left;
+    margin-right: 20px;
+  }
+  li:last-child {
+    margin-right: 0;
+  }
+}
+
+.menu {
+  font-size: 1.3em;
+  font-weight: bold;
+  a {
+    position: relative;
+    transition: bottom 0.1s;
+    bottom: 0;
+    &:hover {
+      color: #6ED3F7;
+      bottom: 4px;
+    }
+  }
+  li.selected a {
+    color: rgb(30, 185, 120);
+  }
+}
+
+.side-bar {
+  float: right;
+  width: 25%;
+}
+
+.input-text {
+  border-radius: 5px;
+  color: darken($bodyColor, 10%);
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  outline: none;//лінія, яка виникає коли ввід попадає в фокус
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  background-color: darken($headerColor, 5%);
+  height: 30px;
+  width: 90px;
+  &:hover {
+    color: #6ED3F7;
+  }
+}
+
+.find, .enter, .short-rating {
+  background-color: darken($bodyColor, 10%);
+  padding: 5%;
+  border-radius: 10px;
+  text-align: right;
+  margin: 10% 0;
+}
+
+.find {
+  margin-top: 0;
+  input[type="search"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.enter, .short-rating {
+  h2 {
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: left;
+    font-weight: 100;
+  }
+}
+.enter {
+  div {
+    text-align: center;
+  }
+  a {
+    color: #1EB978;
+    margin: 10px 5px;
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+.short-rating {
+  text-align: left;
+  margin-bottom: 0;
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+  }
+  .film-rating {
+    float: right;
+  }
+  li {
+    line-height: 180%;
+    vertical-align: middle;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: #6ED3F7;
+    }
+  }
+}

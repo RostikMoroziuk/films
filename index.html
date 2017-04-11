@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Дивись українською - портал україномовного контенту">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Дивись українською</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -23,5 +24,37 @@
       </ul>
     </nav>
   </header>
+  <main class="clearfix">
+    <aside class="side-bar">
+      <article class="find">
+        <form action="#" method="post" id="search-form">
+          <input type="search" name="search-field" placeholder="Пошук" class="input-text">
+          <input type="submit" name="submit" class="btn" value="Знайти">
+        </form>
+      </article>
+      <article class="enter">
+        <h2>Вхід</h2>
+        <form action="#" method="post" id="authorisation">
+          <input type="text" name="login" placeholder="Логін" class="input-text">
+          <input type="password" name="password" class="input-text" placeholder="Пароль">
+          <input type="submit" name="submit-enter" class="btn" value="Ввійти">
+          <div>
+            <a href=""><small>Забули пароль?</small></a>
+            <a href=""><small>Реєстрація</small></a>
+          </div>
+        </form>
+      </article>
+      <article class="short-rating">
+        <h2>Рейтинг фільмів</h2>
+        <ol>
+          <li><a href="#">Інтерстеллар</a><span class="film-rating">8.1</span></li>
+          <li><a href="#">Поводир</a><span class="film-rating">8.0</span></li>
+          <li><a href="#">Клятва</a><span class="film-rating">7.9</span></li>
+          <li><a href="#">Зелена миля</a><span class="film-rating">7.9</span></li>
+          <li><a href="#">Гарі Поттер 1</a><span class="film-rating">7.6</span></li>
+        </ol>
+      </article>
+    </aside>
+  </main>
 </body>
 </html>
