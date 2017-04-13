@@ -1,18 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Roboto');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
 $bodyColor: #39c;
 $headerColor: #0A3B57;
 $contentMargin: 12%;
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   background-color: $bodyColor;
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: 'Roboto', sans-serif;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 header,
@@ -26,16 +35,22 @@ header {
   flex-direction: column;
 }
 
+footer {
+  background: radial-gradient(circle at 50% -100%, lighten($headerColor, 10%), $headerColor);
+  padding: 10px 0;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
   color: white;
 }
 
-.clearfix:after {
+/*.clearfix:after {
   content: "";
   display: table;
   clear: both;
-}
+}*/
 
 .header,
 .navigation,
@@ -44,14 +59,13 @@ main {
 }
 
 .header {
-  border: 1px solid red;
   a:hover {
     color: #91F3F3;
   }
 }
 
 .logo,
-.slogan {
+.slogan {//займають всю ширину по дефолту
   margin: 0;
   padding: 0;
 }
@@ -68,9 +82,10 @@ header .navigation {
 .navigation {
   .menu {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
   }
   li {
-    float: left;
     margin-right: 20px;
   }
   li:last-child {
@@ -95,12 +110,38 @@ header .navigation {
   }
 }
 
-.side-bar {
-  float: right;
-  width: 20%;
+/*main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+}*/
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  //flex-grow: 1;
 }
 
-.input-text {
+.main-section {
+  width: 100px;
+  height: 1000px;
+  background-color: orange;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 1000px;
+  background-color: red;
+}
+
+/*.input-text {
   border-radius: 5px;
   color: darken($bodyColor, 10%);
   border: none;
@@ -228,19 +269,12 @@ header .navigation {
   }
 }
 
-footer {
-  background: radial-gradient(circle at 50% -100%, lighten($headerColor, 10%), $headerColor);
-  padding: 10px 0;
-  text-align: center;
-  .navigation {
-    display: inline-block;
-  }
-}
 .navigation {
+  display: inline-block;
   .footer-menu {
     list-style-type: none;
   }
-}
+}*/
 .footer-menu {
   li {
     margin: 0;
