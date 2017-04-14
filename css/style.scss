@@ -142,7 +142,8 @@ header .navigation {
   min-width: 200px;
 }
 
-.input-text {
+.input-text,
+.input-textarea {
   border-radius: 5px;
   color: darken($bodyColor, 10%);
   border: none;
@@ -157,7 +158,7 @@ header .navigation {
   border-radius: 5px;
   background-color: darken($headerColor, 5%);
   height: 30px;
-  width: 90px;
+  padding: 3px 10px;
   &:hover {
     color: #6ED3F7;
   }
@@ -307,10 +308,13 @@ header .navigation {
 
 .comments {
   padding: 0 50px;
+  form {
+    text-align: right;
+  }
 }
 
 .comment {
-  margin-top: 50px;
+  margin: 50px 0;
   position: relative;
   border: 2px solid rgba($headerColor, 1);
   border-radius: $sectionBorderRadius;
