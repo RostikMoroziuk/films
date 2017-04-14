@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Bitter|Roboto");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+@media (max-width: 515px) {
+  .navigation .menu {
+    flex-direction: column; } }
 * {
   box-sizing: border-box; }
 
@@ -8,23 +11,19 @@ html {
 
 .site {
   background-color: #39c;
-  margin: 0;
-  padding: 0;
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: stretch; }
+  justify-content: flex-start; }
 
 header,
 main {
   padding: 2% 0; }
 
 header {
-  background: radial-gradient(circle at 50% 150%, #0f5a85, #0A3B57);
-  display: flex;
-  flex-direction: column; }
+  background: radial-gradient(circle at 50% 150%, #0f5a85, #0A3B57); }
 
 footer {
   background: radial-gradient(circle at 50% -100%, #0f5a85, #0A3B57);
@@ -38,7 +37,7 @@ a {
 .header,
 .navigation,
 main {
-  margin: 0 12%; }
+  margin: 0 10%; }
 
 .header a:hover {
   color: #91F3F3; }
@@ -55,16 +54,17 @@ header .navigation {
   display: flex;
   justify-content: flex-end; }
 
-.navigation {
-  display: inline-block; }
-  .navigation .menu {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap; }
-  .navigation li {
-    margin-right: 20px; }
-  .navigation li:last-child {
-    margin-right: 0; }
+.navigation .menu,
+.navigation .footer-menu {
+  display: flex; }
+.navigation .menu {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap; }
+.navigation li {
+  margin-right: 20px; }
+.navigation li:last-child {
+  margin-right: 0; }
 
 .menu {
   font-size: 1.3em;
@@ -83,17 +83,16 @@ header .navigation {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   height: 100%; }
 
 .main-section {
-  margin-right: 30px;
   width: 70%;
   flex-grow: 3; }
 
 .side-bar {
-  flex-grow: 0;
+  flex-grow: 1;
   max-width: 200px; }
 
 .input-text {
@@ -158,7 +157,7 @@ header .navigation {
   align-self: center; }
 
 .new-film figure {
-  margin: 0 40px 40px 0; }
+  margin: 0 0 40px 0; }
   .new-film figure:hover {
     color: #02182C;
     box-shadow: 0 0 10px #0A3B57; }
@@ -168,7 +167,8 @@ header .navigation {
 .film {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
 .interesting-info {
   display: flex;
@@ -188,7 +188,7 @@ header .navigation {
 
 .footer-menu {
   list-style-type: none;
-  display: flex; }
+  justify-content: center; }
   .footer-menu li {
     margin: 0;
     padding: 0 10px;

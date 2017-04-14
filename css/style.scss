@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Roboto');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
+@media (max-width: 515px) {
+  .navigation .menu {
+    flex-direction: column;
+  }
+}
+
 $bodyColor: #39c;
 $headerColor: #0A3B57;
-$contentMargin: 12%;
+$contentMargin: 10%;
 
 * {
   box-sizing: border-box;
@@ -15,14 +21,12 @@ html {
 
 .site {
   background-color: $bodyColor;
-  margin: 0;
-  padding: 0;
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  justify-content: flex-start; 
 }
 
 header,
@@ -32,8 +36,6 @@ main {
 
 header {
   background: radial-gradient(circle at 50% 150%, lighten($headerColor, 10%), $headerColor);
-  display: flex;
-  flex-direction: column;
 }
 
 footer {
@@ -75,7 +77,10 @@ header .navigation {
 }
 
 .navigation {
-  display: inline-block;
+  .menu,
+  .footer-menu {
+    display: flex;
+  }
   .menu {
     list-style-type: none;
     display: flex;
@@ -110,19 +115,18 @@ header .navigation {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
 
 .main-section {
-  margin-right: 30px;
   width: 70%;
   flex-grow: 3;
 }
 
 .side-bar {
-  flex-grow: 0;
+  flex-grow: 1;
   max-width: 200px;
 }
 
@@ -185,8 +189,6 @@ header .navigation {
 }
 
 .short-rating {
-  // text-align: left;
-  // margin-bottom: 0;
   ol {
     margin: 0;
     padding: 0;
@@ -209,13 +211,9 @@ header .navigation {
   }
 }
 
-.new-film, .interesting-info {
-
-} 
-
 .new-film {
   figure {
-    margin: 0 40px 40px 0;
+    margin: 0 0 40px 0;
     &:hover {
       color: #02182C;
       box-shadow: 0 0 10px #0A3B57;
@@ -230,6 +228,7 @@ header .navigation {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .interesting-info {
@@ -255,7 +254,7 @@ header .navigation {
 
 .footer-menu {
   list-style-type: none;
-  display: flex;
+  justify-content: center;
   li {
     margin: 0;
     padding: 0 10px;
