@@ -52,6 +52,12 @@ hr {
   width: 50%;
 }
 
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .header,
 .navigation,
 main {
@@ -306,6 +312,14 @@ header .navigation {
   }
 }
 
+.movie {
+  background-color: rgba($headerColor, 0.3);
+  padding: 15px;
+  p {
+    min-height: 200px;
+  }
+}
+
 .comments {
   padding: 0 50px;
   form {
@@ -336,4 +350,10 @@ header .navigation {
     padding: 0 10px 10px;
     font-size: 0.9em;
   }
+}
+
+
+//FILMS PAGE
+.watch {
+  float: right;
 }
