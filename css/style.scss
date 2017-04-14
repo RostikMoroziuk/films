@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Roboto');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-
-@media (max-width: 515px) {
+@media (max-width: 550px) {
   .navigation .menu {
     flex-direction: column;
   }
@@ -10,7 +9,7 @@
 $bodyColor: #39c;
 $headerColor: #0A3B57;
 $contentMargin: 10%;
-
+$sectionBorderRadius: 10px;
 * {
   box-sizing: border-box;
 }
@@ -26,7 +25,7 @@ html {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: flex-start;
 }
 
 header,
@@ -49,6 +48,10 @@ a {
   color: white;
 }
 
+hr {
+  width: 50%;
+}
+
 .header,
 .navigation,
 main {
@@ -56,13 +59,15 @@ main {
 }
 
 .header {
+  display: inline-block;
   a:hover {
     color: #91F3F3;
   }
 }
 
 .logo,
-.slogan {//займають всю ширину по дефолту
+.slogan {
+  //займають всю ширину по дефолту
   margin: 0;
   padding: 0;
 }
@@ -113,21 +118,28 @@ header .navigation {
 
 .main {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
   height: 100%;
 }
 
 .main-section {
-  width: 70%;
+  flex-basis: 70%;
   flex-grow: 3;
+  padding: 20px;
+  .trailer {
+    display: flex;
+    margin: 0 auto;
+  }
 }
 
 .side-bar {
+  flex-basis: 20%;
   flex-grow: 1;
-  max-width: 200px;
+  padding: 20px;
+  min-width: 200px;
 }
 
 .input-text {
@@ -137,7 +149,7 @@ header .navigation {
   padding: 5px;
   margin-bottom: 10px;
   width: 100%;
-  outline: none;//лінія, яка виникає коли ввід попадає в фокус
+  outline: none; //лінія, яка виникає коли ввід попадає в фокус
 }
 
 .btn {
@@ -151,10 +163,12 @@ header .navigation {
   }
 }
 
-.find, .enter, .short-rating {
+.find,
+.enter,
+.short-rating {
   background-color: darken($bodyColor, 10%);
   padding: 5%;
-  border-radius: 10px;
+  border-radius: $sectionBorderRadius;
   text-align: right;
   margin: 10% 0;
 }
@@ -167,7 +181,8 @@ header .navigation {
   }
 }
 
-.enter, .short-rating {
+.enter,
+.short-rating {
   h2 {
     margin: 0 0 10px;
     padding: 0;
@@ -175,6 +190,7 @@ header .navigation {
     font-weight: 100;
   }
 }
+
 .enter {
   div {
     text-align: center;
@@ -182,7 +198,7 @@ header .navigation {
   a {
     color: #1EB978;
     margin: 10px 5px;
-    &:hover{
+    &:hover {
       color: white;
     }
   }
@@ -229,6 +245,9 @@ header .navigation {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  a {
+    margin: 10px;
+  }
 }
 
 .interesting-info {
@@ -236,16 +255,12 @@ header .navigation {
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis: 300px;
-   hr {
-     width: 50%;
-   }
   h2 {
     font-weight: 200;
     font-size: 1.3em;
   }
   p {
     font-size: 0.9em;
-    padding-right: 30px;
   }
   article {
     margin-bottom: 5%;
@@ -270,5 +285,51 @@ header .navigation {
   }
   li:last-child {
     border-right: none;
+  }
+}
+
+//FILM PAGE
+.about-film {
+  display: flex;
+  flex-direction: column;
+  .values {
+    margin: 40px 0;
+  }
+}
+
+.description {
+  margin-bottom: 40px;
+  img {
+    float: left;
+    margin-right: 15px;
+  }
+}
+
+.comments {
+  padding: 0 50px;
+}
+
+.comment {
+  margin-top: 50px;
+  position: relative;
+  border: 2px solid rgba($headerColor, 1);
+  border-radius: $sectionBorderRadius;
+  background-color: rgba($headerColor, 0.3);
+  img {
+    position: absolute;
+    left: -35px;
+    top: -35px;
+    float: left;
+  }
+  .user-name {
+    margin: 0;
+    background-color: rgba($headerColor, 0.6);
+    height: 35px;
+    padding: 5px 0 5px 60px;
+  }
+  .text {
+    margin-top: 10px;
+    padding: 0 10px 10px;
+    font-size: 0.9em;
   }
 }

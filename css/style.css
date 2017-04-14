@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Bitter|Roboto");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
-@media (max-width: 515px) {
+@media (max-width: 550px) {
   .navigation .menu {
     flex-direction: column; } }
 * {
@@ -34,13 +34,18 @@ a {
   text-decoration: none;
   color: white; }
 
+hr {
+  width: 50%; }
+
 .header,
 .navigation,
 main {
   margin: 0 10%; }
 
-.header a:hover {
-  color: #91F3F3; }
+.header {
+  display: inline-block; }
+  .header a:hover {
+    color: #91F3F3; }
 
 .logo,
 .slogan {
@@ -81,19 +86,25 @@ header .navigation {
 
 .main {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
   height: 100%; }
 
 .main-section {
-  width: 70%;
-  flex-grow: 3; }
+  flex-basis: 70%;
+  flex-grow: 3;
+  padding: 20px; }
+  .main-section .trailer {
+    display: flex;
+    margin: 0 auto; }
 
 .side-bar {
+  flex-basis: 20%;
   flex-grow: 1;
-  max-width: 200px; }
+  padding: 20px;
+  min-width: 200px; }
 
 .input-text {
   border-radius: 5px;
@@ -113,7 +124,9 @@ header .navigation {
   .btn:hover {
     color: #6ED3F7; }
 
-.find, .enter, .short-rating {
+.find,
+.enter,
+.short-rating {
   background-color: #297aa3;
   padding: 5%;
   border-radius: 10px;
@@ -126,7 +139,8 @@ header .navigation {
     width: 100%;
     box-sizing: border-box; }
 
-.enter h2, .short-rating h2 {
+.enter h2,
+.short-rating h2 {
   margin: 0 0 10px;
   padding: 0;
   text-align: left;
@@ -169,20 +183,19 @@ header .navigation {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around; }
+  .film a {
+    margin: 10px; }
 
 .interesting-info {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis: 300px; }
-  .interesting-info hr {
-    width: 50%; }
   .interesting-info h2 {
     font-weight: 200;
     font-size: 1.3em; }
   .interesting-info p {
-    font-size: 0.9em;
-    padding-right: 30px; }
+    font-size: 0.9em; }
   .interesting-info article {
     margin-bottom: 5%; }
 
@@ -201,5 +214,41 @@ header .navigation {
         text-decoration: none; }
   .footer-menu li:last-child {
     border-right: none; }
+
+.about-film {
+  display: flex;
+  flex-direction: column; }
+  .about-film .values {
+    margin: 40px 0; }
+
+.description {
+  margin-bottom: 40px; }
+  .description img {
+    float: left;
+    margin-right: 15px; }
+
+.comments {
+  padding: 0 50px; }
+
+.comment {
+  margin-top: 50px;
+  position: relative;
+  border: 2px solid #0a3b57;
+  border-radius: 10px;
+  background-color: rgba(10, 59, 87, 0.3); }
+  .comment img {
+    position: absolute;
+    left: -35px;
+    top: -35px;
+    float: left; }
+  .comment .user-name {
+    margin: 0;
+    background-color: rgba(10, 59, 87, 0.6);
+    height: 35px;
+    padding: 5px 0 5px 60px; }
+  .comment .text {
+    margin-top: 10px;
+    padding: 0 10px 10px;
+    font-size: 0.9em; }
 
 /*# sourceMappingURL=style.css.map */
