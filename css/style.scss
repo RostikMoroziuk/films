@@ -165,7 +165,8 @@ header .navigation {
   background-color: darken($headerColor, 5%);
   height: 30px;
   padding: 3px 10px;
-  &:hover {
+  &:hover, 
+  a:hover {
     color: #6ED3F7;
   }
 }
