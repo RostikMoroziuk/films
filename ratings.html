@@ -20,62 +20,52 @@
     </section>
     <nav class="navigation">
       <ul class="menu">
-        <li class="selected"><a href="index.html">Головна</a></li>
+        <li><a href="index.html">Головна</a></li>
         <li><a href="films.html">Фільми</a></li>
-        <li><a href="ratings.html">Рейтинг фільмів</a></li>
+        <li class="selected"><a href="ratings.html">Рейтинг фільмів</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <div class="main">
       <div class="main-section">
-        <h2>Новинки</h2>
-        <section class="new-film">
-          <div class="film">
-            <a href="#">
-              <figure>
-                <img src="img/cloud.png">
-                <figcaption>Хмарний атлас 2012. США</figcaption>
-              </figure>
-            </a>
-            <a href="film.html">
-              <figure>
-                <img src="img/inter.png">
-                <figcaption>Інтерстеллар 2015. США</figcaption>
-              </figure>
-            </a>
-            <a href="#">
-              <figure>
-                <img src="img/matrix.png">
-                <figcaption>Матриця 2002. США</figcaption>
-              </figure>
-            </a>
-            <a href="#">
-              <figure>
-                <img src="img/max.png">
-                <figcaption>Скажений Макс 2015. США</figcaption>
-              </figure>
-            </a>
-          </div>
-        </section>
-        <section class="interesting-info">
-          <article>
-            <hr>
-            <h2>Lorem ipsum dolor.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="#">
-              <button class="btn">Читати...</button>
-            </a>
-          </article>
-          <article>
-            <hr>
-            <h2>Lorem ipsum dolor.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="#">
-              <button class="btn">Читати...</button>
-            </a>
-          </article>
-        </section>
+        <table class="rating-table">
+          <caption>Рейтинг фільмів за редакцією сайта</caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Назва</th>
+              <th>Рік</th>
+              <th>Рейтинг</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="img/inter.png" width="60px"></td>
+              <td>Інтерстеллар</td>
+              <td>2013</td>
+              <td>8.1</td>
+            </tr>
+            <tr>
+              <td><img src="img/povodyr.png" width="60px"></td>
+              <td>Поводир</td>
+              <td>2014</td>
+              <td>8.0</td>
+            </tr>
+            <tr>
+              <td><img src="img/1004530182.jpg" width="60px"></td>
+              <td>Клятва</td>
+              <td>2012</td>
+              <td>7.9</td>
+            </tr>
+            <tr>
+              <td><img src="img/green.jpg" width="60px"></td>
+              <td>Зелена миля</td>
+              <td>1998</td>
+              <td>7.9</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <aside class="side-bar">
         <article class="find">
