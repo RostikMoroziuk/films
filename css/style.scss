@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Roboto');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-@media (max-width: 550px) {
-  .navigation .menu {
-    flex-direction: column;
-  }
-}
-
 $bodyColor: #39c;
 $headerColor: #0A3B57;
 $contentMargin: 10%;
@@ -165,7 +159,7 @@ header .navigation {
   background-color: darken($headerColor, 5%);
   height: 30px;
   padding: 3px 10px;
-  &:hover, 
+  &:hover,
   a:hover {
     color: #6ED3F7;
   }
@@ -353,12 +347,10 @@ header .navigation {
   }
 }
 
-
 //FILMS PAGE
 .watch {
   float: right;
 }
-
 
 //RATINGS PAGE
 .rating-table {
@@ -391,5 +383,44 @@ header .navigation {
     &:hover {
       color: #91F3F3;
     }
+  }
+  td {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .navigation .menu {
+    flex-direction: column;
+    align-self: center;
+  }
+  header .navigation {
+    justify-content: center;
+  }
+  .btn {
+    width: 100%;
+  }
+  .trailer {
+    width: 100%;
+    height: 100%;
+  }
+  .description {
+    text-align: center;
+    img {
+      float: none;
+    }
+    p {
+      text-align: left;
+    }
+  }
+  .comments {
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .rating-table th:nth-child(1),
+  .rating-table td:nth-child(1) {
+    display: none;
   }
 }
