@@ -369,8 +369,7 @@ header .navigation {
   max-width: 700px;
   caption {
     font-size: 1.6em;
-    // white-space: nowrap;
-    color: #91F3F3;
+    font-weight: 900;
     margin-bottom: 20px;
   }
   tr {
@@ -386,5 +385,11 @@ header .navigation {
   }
   img {
     vertical-align: middle;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: #91F3F3;
+    }
   }
 }
