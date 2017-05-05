@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+* {
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+.site {
+  background-color: #39c;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+header,
+main {
+  padding: 2% 0; }
+
+header {
+  background: radial-gradient(circle at 50% 150%, #0f5a85, #0A3B57); }
+
+footer {
+  background: radial-gradient(circle at 50% -100%, #0f5a85, #0A3B57);
+  padding: 10px 0;
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+hr {
+  width: 50%; }
+
+.clearfix {
+  content: "";
+  clear: both;
+  display: table; }
+
+.header,
+.navigation,
+main {
+  margin: 0 10%; }
+
+.header {
+  display: inline-block; }
+  .header a:hover {
+    color: #91F3F3; }
+
+.logo,
+.slogan {
+  margin: 0;
+  padding: 0; }
+
+.logo {
+  font-family: 'Roboto Slab', serif; }
+
+header .navigation {
+  display: flex;
+  justify-content: flex-end; }
+
+.navigation .menu,
+.navigation .footer-menu {
+  display: flex; }
+.navigation .menu {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap; }
+.navigation li {
+  margin-right: 20px; }
+.navigation li:last-child {
+  margin-right: 0; }
+
+.menu {
+  font-size: 1.3em;
+  font-weight: bold; }
+  .menu a {
+    position: relative;
+    transition: bottom 0.1s;
+    bottom: 0; }
+    .menu a:hover {
+      color: #6ED3F7;
+      bottom: 4px; }
+  .menu li.selected a {
+    color: #1eb978; }
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%; }
+
+.main-section {
+  flex-basis: 70%;
+  flex-grow: 3;
+  padding: 20px; }
+  .main-section .trailer {
+    display: flex;
+    margin: 0 auto; }
+
+.side-bar {
+  flex-basis: 20%;
+  flex-grow: 1;
+  padding: 20px;
+  min-width: 200px; }
+
+.input-text,
+.input-textarea {
+  border-radius: 5px;
+  color: #297aa3;
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  outline: none; }
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #072b40;
+  height: 30px;
+  padding: 3px 10px; }
+  .btn:hover,
+  .btn a:hover {
+    color: #6ED3F7; }
+
+.find,
+.enter,
+.short-rating {
+  background-color: #297aa3;
+  padding: 5%;
+  border-radius: 10px;
+  text-align: right;
+  margin: 10% 0; }
+
+.find {
+  margin-top: 0; }
+  .find input[type="search"] {
+    width: 100%;
+    box-sizing: border-box; }
+
+.enter h2,
+.short-rating h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  text-align: left;
+  font-weight: 100; }
+
+.enter div {
+  text-align: center; }
+.enter a {
+  color: #1EB978;
+  margin: 10px 5px; }
+  .enter a:hover {
+    color: white; }
+
+.short-rating ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; }
+.short-rating li {
+  display: flex;
+  justify-content: space-between;
+  line-height: 180%; }
+.short-rating a {
+  text-align: left;
+  text-decoration: underline; }
+  .short-rating a:hover {
+    color: #6ED3F7; }
+.short-rating span {
+  align-self: center; }
+
+.new-film figure {
+  margin: 0 0 40px 0; }
+  .new-film figure:hover {
+    color: #02182C;
+    box-shadow: 0 0 10px #0A3B57; }
+  .new-film figure figcaption {
+    max-width: 150px; }
+
+.film {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .film a {
+    margin: 10px; }
+
+.interesting-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 300px; }
+  .interesting-info h2 {
+    font-weight: 200;
+    font-size: 1.3em; }
+  .interesting-info p {
+    font-size: 0.9em; }
+  .interesting-info article {
+    margin-bottom: 5%; }
+
+.footer-menu {
+  list-style-type: none;
+  justify-content: center; }
+  .footer-menu li {
+    margin: 0;
+    padding: 0 10px;
+    border-right: 2px solid #6ED3F7; }
+    .footer-menu li a {
+      color: #6ED3F7;
+      text-decoration: underline; }
+      .footer-menu li a:hover {
+        color: white;
+        text-decoration: none; }
+  .footer-menu li:last-child {
+    border-right: none; }
+
+.about-film {
+  display: flex;
+  flex-direction: column; }
+  .about-film .values {
+    margin: 40px 0; }
+
+.description {
+  margin-bottom: 40px; }
+  .description img {
+    float: left;
+    margin-right: 15px; }
+
+.movie {
+  background-color: rgba(10, 59, 87, 0.3);
+  padding: 15px; }
+  .movie p {
+    min-height: 200px; }
+
+.comments {
+  padding: 0 50px; }
+  .comments form {
+    text-align: right; }
+
+.comment {
+  margin: 50px 0;
+  position: relative;
+  border: 2px solid #0a3b57;
+  border-radius: 10px;
+  background-color: rgba(10, 59, 87, 0.3); }
+  .comment img {
+    position: absolute;
+    left: -35px;
+    top: -35px;
+    float: left; }
+  .comment .user-name {
+    margin: 0;
+    background-color: rgba(10, 59, 87, 0.6);
+    height: 35px;
+    padding: 5px 0 5px 60px; }
+  .comment .text {
+    margin-top: 10px;
+    padding: 0 10px 10px;
+    font-size: 0.9em; }
+
+.watch {
+  float: right; }
+
+.rating-table {
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+  max-width: 700px; }
+  .rating-table caption {
+    font-size: 1.6em;
+    font-weight: 900;
+    margin-bottom: 20px; }
+  .rating-table tr {
+    padding: 105px 0;
+    line-height: 90px; }
+  .rating-table thead tr {
+    background-color: #0A3B57;
+    line-height: 40px; }
+  .rating-table tr:nth-child(2n) {
+    background-color: rgba(10, 59, 87, 0.2); }
+  .rating-table img {
+    vertical-align: middle; }
+  .rating-table a {
+    text-decoration: underline; }
+    .rating-table a:hover {
+      color: #91F3F3; }
+  .rating-table td {
+    padding: 0 10px; }
+
+@media (max-width: 550px) {
+  .navigation .menu {
+    flex-direction: column;
+    align-self: center; }
+
+  header .navigation {
+    justify-content: center; }
+
+  .btn {
+    width: 100%; }
+
+  .trailer {
+    width: 100%;
+    height: 100%; }
+
+  .description {
+    text-align: center; }
+    .description img {
+      float: none; }
+    .description p {
+      text-align: left; }
+
+  .comments {
+    padding: 0; } }
+@media (max-width: 400px) {
+  .rating-table th:nth-child(1),
+  .rating-table td:nth-child(1) {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */
